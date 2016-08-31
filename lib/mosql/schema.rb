@@ -222,14 +222,14 @@ module MoSQL
         else
           v = fetch_and_delete_dotted(obj, source)
           case v
-          when Hash
-            v = JSON.dump(Hash[v.map { |k,v| [k, transform_primitive(v)] }])
+            when Hash
+            v = JSON.dump(sanitize(Hash[v.map { |k,v| [k, transform_primitive(v)] }]))
           when Array
             v = v.map { |it| transform_primitive(it) }
             if col[:array_type]
               v = Sequel.pg_array(v, col[:array_type])
             else
-              v = JSON.dump(v)
+              v = JSON.dump(sanitize(v))
             end
           else
             v = transform_primitive(v, type)
