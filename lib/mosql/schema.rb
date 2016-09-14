@@ -13,6 +13,7 @@ module MoSQL
             :source => ent.fetch(:source),
             :type   => ent.fetch(:type),
             :name   => (ent.keys - [:source, :type]).first,
+            :modify => ent[:modify]
           }
         elsif ent.is_a?(Hash) && ent.keys.length == 1 && ent.values.first.is_a?(String)
           col = {
@@ -57,7 +58,8 @@ module MoSQL
       meta
     end
 
-    def initialize(map)
+    def initialize(map, modifier)
+      @modifier = modifier
       @map = {}
       map.each do |dbname, db|
         @map[dbname] = { :meta => parse_meta(db[:meta]) }
@@ -218,24 +220,24 @@ module MoSQL
         type = col[:type]
 
         if source.start_with?("$")
-          v = fetch_special_source(obj, source, original)
+          value = fetch_special_source(obj, source, original)
         else
-          v = fetch_and_delete_dotted(obj, source)
-          case v
+          value = fetch_and_delete_dotted(obj, source)
+          case value
             when Hash
-            v = JSON.dump(sanitize(Hash[v.map { |k,v| [k, transform_primitive(v)] }]))
+            value = JSON.dump(sanitize(Hash[value.map { |k,v| [k, transform_primitive(v)] }]))
           when Array
-            v = v.map { |it| transform_primitive(it) }
+            value = value.map { |it| transform_primitive(it) }
             if col[:array_type]
-              v = Sequel.pg_array(v, col[:array_type])
+              value = Sequel.pg_array(value, col[:array_type])
             else
-              v = JSON.dump(sanitize(v))
+              value = JSON.dump(sanitize(value))
             end
           else
-            v = transform_primitive(v, type)
+            value = transform_primitive(value, type)
           end
         end
-        row << v
+        row << @modifier.process(ns, col, value)
       end
 
       if schema[:meta][:extra_props]

@@ -42,64 +42,68 @@ module MoSQL
       optparse = OptionParser.new do |opts|
         opts.banner = "Usage: #{$0} [options] "
 
-        opts.on('-h', '--help', "Display this message") do
+        opts.on('-h', '--help', 'Display this message') do
           puts opts
           exit(0)
         end
 
-        opts.on('-v', "Increase verbosity") do
+        opts.on('-v', 'Increase verbosity') do
           @options[:verbose] += 1
         end
 
-        opts.on("-c", "--collections [collections.yml]", "Collection map YAML file") do |file|
+        opts.on('-c', '--collections [collections.yml]', 'Collection map YAML file') do |file|
           @options[:collections] = file
         end
 
-        opts.on("--sql [sqluri]", "SQL server to connect to") do |uri|
+        opts.on('--sql [sqluri]', 'SQL server to connect to') do |uri|
           @options[:sql] = uri
         end
 
-        opts.on("--mongo [mongouri]", "Mongo connection string") do |uri|
+        opts.on('--mongo [mongouri]', 'Mongo connection string') do |uri|
           @options[:mongo] = uri
         end
 
-        opts.on("--schema [schema]", "PostgreSQL 'schema' to namespace tables") do |schema|
+        opts.on('--modifiers-path [modifiers_path]', 'Path to local directory with modifiers') do |path|
+          @options[:modifiers_path] = path
+        end
+
+        opts.on('--schema [schema]', 'PostgreSQL \'schema\' to namespace tables') do |schema|
           @options[:schema] = schema
         end
 
-        opts.on("--ignore-delete", "Ignore delete operations when tailing") do
+        opts.on('--ignore-delete', 'Ignore delete operations when tailing') do
           @options[:ignore_delete] = true
         end
 
-        opts.on("--only-db [dbname]", "Don't scan for mongo dbs, just use the one specified") do |dbname|
+        opts.on('--only-db [dbname]', 'Don\'t scan for mongo dbs, just use the one specified') do |dbname|
           @options[:dbname] = dbname
         end
 
-        opts.on("--tail-from [timestamp]", "Start tailing from the specified UNIX timestamp") do |ts|
+        opts.on('--tail-from [timestamp]', 'Start tailing from the specified UNIX timestamp') do |ts|
           @options[:tail_from] = ts
         end
 
-        opts.on("--service [service]", "Service name to use when storing tailing state") do |service|
+        opts.on('--service [service]', 'Service name to use when storing tailing state') do |service|
           @options[:service] = service
         end
 
-        opts.on("--skip-tail", "Don't tail the oplog, just do the initial import") do
+        opts.on('--skip-tail', 'Don\'t tail the oplog, just do the initial import') do
           @options[:skip_tail] = true
         end
 
-        opts.on("--skip-import", "Don't import data before tailing oplog") do
+        opts.on('--skip-import', 'Don\'t import data before tailing oplog') do
           @options[:skip_import] = true
         end
 
-        opts.on("--reimport", "Force a data re-import") do
+        opts.on('--reimport', 'Force a data re-import') do
           @options[:reimport] = true
         end
 
-        opts.on("--no-drop-tables", "Don't drop the table if it exists during the initial import") do
+        opts.on('--no-drop-tables', 'Don\'t drop the table if it exists during the initial import') do
           @options[:no_drop_tables] = true
         end
 
-        opts.on("--unsafe", "Ignore rows that cause errors on insert") do
+        opts.on('--unsafe', 'Ignore rows that cause errors on insert') do
           @options[:unsafe] = true
         end
 
@@ -143,7 +147,7 @@ module MoSQL
     def load_collections
       collections = YAML.load_file(@options[:collections])
       begin
-        @schema = MoSQL::Schema.new(collections)
+        @schema = MoSQL::Schema.new(collections, Modifier.new(@options[:modifiers_path]))
       rescue MoSQL::SchemaError => e
         log.error("Error parsing collection map `#{@options[:collections]}':")
         log.error(e.to_s)
