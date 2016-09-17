@@ -10,7 +10,7 @@ module MoSQL
     end
 
     def process(ns, column_config, value)
-      return value unless column_config[:modify].is_a? Array && column_config[:modify].length > 0
+      return value unless column_config[:modify].is_a? Array
 
       column_config[:modify].inject(value) {|result, modifier| apply_modifier(modifier, ns, column_config, result)}
     end
