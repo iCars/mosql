@@ -2552,9 +2552,6 @@ icars:
       - coordinates:
         :source: coordinates
         :type: JSON
-      - description:
-        :source: Description
-        :type: TEXT
       - name:
         :source: Name
         :type: TEXT
