@@ -3891,6 +3891,9 @@ icars:
       - displaydestination:
         :source: displayDestination
         :type: BOOLEAN
+      - isairportpickup:
+        :source: isAirportPickup
+        :type: BOOLEAN
     :meta:
       :table: triprequest
       :extra_props: true
