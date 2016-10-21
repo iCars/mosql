@@ -4046,9 +4046,6 @@ icars:
       - dmc_id:
         :source: dmc_id
         :type: TEXT
-      - notes:
-        :source: notes
-        :type: TEXT
     :meta:
       :table: user
       :extra_props: true
