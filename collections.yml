@@ -1039,6 +1039,9 @@ icars:
       - middle_name:
         :source: middle_name
         :type: TEXT
+      - notes:
+        :source: notes
+        :type: JSON
     :meta:
       :table: driverforapproval
       :extra_props: true
@@ -1077,6 +1080,9 @@ icars:
       - inactive:
         :source: inactive
         :type: BOOLEAN
+      - notes:
+        :source: notes
+        :type: JSON
     :meta:
       :table: admin
       :extra_props: true
@@ -1275,6 +1281,9 @@ icars:
       - setupwhen:
         :source: setupWhen
         :type: TIMESTAMP WITH TIME ZONE
+      - notes:
+        :source: notes
+        :type: JSON
     :meta:
       :table: dmcadmin
       :extra_props: true
@@ -1583,6 +1592,9 @@ icars:
         :type: BOOLEAN
       - telephone:
         :source: telephone
+        :type: JSON
+      - notes:
+        :source: notes
         :type: JSON
     :meta:
       :table: dmcdivisionadmin
@@ -3512,7 +3524,7 @@ icars:
         :type: TEXT
       - notes:
         :source: notes
-        :type: TEXT
+        :type: JSON
     :meta:
       :table: phoenixuser
       :extra_props: true
