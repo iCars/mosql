@@ -3510,6 +3510,9 @@ icars:
       - imageurl:
         :source: imageURL
         :type: TEXT
+      - notes:
+        :source: notes
+        :type: TEXT
     :meta:
       :table: phoenixuser
       :extra_props: true
@@ -4042,6 +4045,9 @@ icars:
         :type: TEXT
       - dmc_id:
         :source: dmc_id
+        :type: TEXT
+      - notes:
+        :source: notes
         :type: TEXT
     :meta:
       :table: user
