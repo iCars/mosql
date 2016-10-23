@@ -1529,6 +1529,9 @@ icars:
       - name:
         :source: name
         :type: TEXT
+      - description:
+        :source: description
+        :type: TEXT
     :meta:
       :table: dmcpointtopoint
       :extra_props: true
@@ -1950,6 +1953,9 @@ icars:
       - updatedat:
         :source: updatedAt
         :type: TIMESTAMP WITH TIME ZONE
+      - description:
+        :source: description
+        :type: TEXT
     :meta:
       :table: interestedmarket
       :extra_props: true
@@ -2589,6 +2595,55 @@ icars:
         :type: BOOLEAN
     :meta:
       :table: postcollection
+      :extra_props: true
+  DMCTransportClass:
+    :columns:
+      - id:
+        :source: _id
+        :type: TEXT
+      - name:
+        :source: name
+        :type: TEXT
+      - description:
+        :source: description
+        :type: TEXT
+      - color:
+        :source: color
+        :type: TEXT
+      - transporttypes:
+        :source: transportTypes
+        :type: JSON
+    :meta:
+      :table: dmctransportclass
+      :extra_props: true
+  DMCTransportType:
+    :columns:
+      - id:
+        :source: _id
+        :type: TEXT
+      - name:
+        :source: name
+        :type: TEXT
+      - description:
+        :source: description
+        :type: TEXT
+      - icon:
+        :source: icon
+        :type: TEXT
+      - passengercapacity:
+        :source: passengerCapacity
+        :type: float8
+      - luggagecapacity:
+        :source: luggageCapacity
+        :type: float8
+      - rates:
+        :source: rates
+        :type: JSON
+      - pointtopointrates:
+        :source: pointToPointRates
+        :type: JSON
+    :meta:
+      :table: dmctransporttype
       :extra_props: true
   DMCTransferObject:
     :columns:
