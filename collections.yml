@@ -3483,6 +3483,32 @@ icars:
     :meta:
       :table: triphop
       :extra_props: true
+  StripePayload:
+    :columns:
+      - stripetoken:
+        :source: stripeToken
+        :type: TEXT
+      - customerdescription:
+        :source: customerDescription
+        :type: TEXT
+      - amount:
+        :source: amount
+        :type: float8
+      - receipt_email:
+        :source: receipt_email
+        :type: TEXT
+      - isauth:
+        :source: isAuth
+        :type: TEXT
+      - description:
+        :source: description
+        :type: TEXT
+      - customer:
+        :source: customer
+        :type: TEXT
+    :meta:
+      :table: stripepayload
+      :extra_props: true
   DMCDepartmentAdmin:
     :columns:
       - id:
@@ -3580,6 +3606,9 @@ icars:
       - notes:
         :source: notes
         :type: JSON
+      - username:
+        :source: username
+        :type: TEXT
     :meta:
       :table: phoenixuser
       :extra_props: true
@@ -4112,6 +4141,9 @@ icars:
         :type: TEXT
       - dmc_id:
         :source: dmc_id
+        :type: TEXT
+      - username:
+        :source: username
         :type: TEXT
     :meta:
       :table: user
