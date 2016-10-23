@@ -83,6 +83,9 @@ icars:
       - name:
         :source: name
         :type: TEXT
+      - description:
+        :source: description
+        :type: TEXT
       - created:
         :source: created
         :type: TIMESTAMP WITH TIME ZONE
