@@ -1089,6 +1089,9 @@ icars:
       - username:
         :source: username
         :type: TEXT
+      - photo_url:
+        :source: photo_url
+        :type: TEXT
     :meta:
       :table: admin
       :extra_props: true
