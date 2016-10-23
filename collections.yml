@@ -3485,6 +3485,9 @@ icars:
       :extra_props: true
   StripePayload:
     :columns:
+      - id:
+        :source: _id
+        :type: TEXT
       - stripetoken:
         :source: stripeToken
         :type: TEXT
