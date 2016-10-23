@@ -1086,6 +1086,9 @@ icars:
       - notes:
         :source: notes
         :type: JSON
+      - username:
+        :source: username
+        :type: TEXT
     :meta:
       :table: admin
       :extra_props: true
