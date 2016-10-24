@@ -1,4 +1,4 @@
-collections.yml
+#collections.yml
 /.bundle/
 Gemfile.lock
 .idea
