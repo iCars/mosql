@@ -4116,9 +4116,6 @@ icars:
           - cancelcategories:
             :source: cancelcategories
             :type: TEXT
-          - cancelcategories:
-            :source: cancelcategories
-            :type: TEXT
           - cancelnote:
             :source: cancelnote
             :type: TEXT
