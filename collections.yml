@@ -4110,6 +4110,9 @@ icars:
         - poi_rate:
           :source: poi_rate
           :type: TEXT
+        - marketdispatchrules:
+          :source: marketdispatchrules
+          :type: TEXT
       :meta:
         :table: triprequest
         :extra_props: true
