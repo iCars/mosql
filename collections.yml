@@ -1,4 +1,4 @@
-icars:
+icars-migration:
   TPTPAffiliate:
     :columns:
       - id:
@@ -1091,6 +1091,15 @@ icars:
         :type: TEXT
       - photo_url:
         :source: photo_url
+        :type: TEXT
+      - language:
+        :source: language
+        :type: TEXT
+      - realm:
+        :source: realm
+        :type: TEXT
+      - title:
+        :source: title
         :type: TEXT
     :meta:
       :table: admin
