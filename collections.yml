@@ -650,6 +650,36 @@ icars-migration:
       - referral:
         :source: referral
         :type: bool
+      - username:
+        :source: username
+        :type: text
+      - photo_url:
+        :source: photo_url
+        :type: text
+      - language:
+        :source: language
+        :type: text
+      - realm:
+        :source: realm
+        :type: text
+      - title:
+        :source: title
+        :type: text
+      - credentials:
+        :source: credentials
+        :type: jsonb
+      - challenges:
+        :source: challenges
+        :type: jsonb
+      - emailverified:
+        :source: emailVerified
+        :type: bool
+      - verificationtoken:
+        :source: verificationToken
+        :type: text
+      - lastupdated:
+        :source: lastUpdated
+        :type: TIMESTAMP WITH TIME ZONE
     :meta:
       :table: passenger
       :extra_props: true
@@ -792,6 +822,36 @@ icars-migration:
       - newbookingagentwebui:
         :source: newBookingAgentWebUI
         :type: BOOLEAN
+      - photo_url:
+        :source: photo_url
+        :type: text
+      - language:
+        :source: language
+        :type: text
+      - realm:
+        :source: realm
+        :type: text
+      - title:
+        :source: title
+        :type: text
+      - credentials:
+        :source: credentials
+        :type: jsonb
+      - challenges:
+        :source: challenges
+        :type: jsonb
+      - emailverified:
+        :source: emailVerified
+        :type: bool
+      - verificationtoken:
+        :source: verificationToken
+        :type: text
+      - lastupdated:
+        :source: lastUpdated
+        :type: TIMESTAMP WITH TIME ZONE
+      - btid:
+        :source: btId
+        :type: text
     :meta:
       :table: bookingagent
       :extra_props: true
@@ -842,6 +902,42 @@ icars-migration:
       - fromtpgeneralinfo:
         :source: fromTPGeneralInfo
         :type: BOOLEAN
+      - username:
+        :source: username
+        :type: text
+      - photo_url:
+        :source: photo_url
+        :type: text
+      - language:
+        :source: language
+        :type: text
+      - realm:
+        :source: realm
+        :type: text
+      - title:
+        :source: title
+        :type: text
+      - credentials:
+        :source: credentials
+        :type: jsonb
+      - challenges:
+        :source: challenges
+        :type: jsonb
+      - emailverified:
+        :source: emailVerified
+        :type: bool
+      - verificationtoken:
+        :source: verificationToken
+        :type: text
+      - resetpasswordtoken:
+        :source: resetPasswordToken
+        :type: text
+      - lastupdated:
+        :source: lastUpdated
+        :type: TIMESTAMP WITH TIME ZONE
+      - btid:
+        :source: btId
+        :type: text
     :meta:
       :table: tpadmin
       :extra_props: true
@@ -1093,6 +1189,42 @@ icars-migration:
       - insurancedocumentverified:
         :source: insuranceDocumentVerified
         :type: TIMESTAMP WITH TIME ZONE
+      - username:
+        :source: username
+        :type: text
+      - photo_url:
+        :source: photo_url
+        :type: text
+      - language:
+        :source: language
+        :type: text
+      - telephone:
+        :source: telephone
+        :type: jsonb
+      - realm:
+        :source: realm
+        :type: text
+      - title:
+        :source: title
+        :type: text
+      - credentials:
+        :source: credentials
+        :type: jsonb
+      - challenges:
+        :source: challenges
+        :type: jsonb
+      - verificationtoken:
+        :source: verificationToken
+        :type: text
+      - resetpasswordtoken:
+        :source: resetPasswordToken
+        :type: text
+      - lastupdated:
+        :source: lastUpdated
+        :type: TIMESTAMP WITH TIME ZONE
+      - btid:
+        :source: btId
+        :type: text
     :meta:
       :table: driverforapproval
       :extra_props: true
@@ -1374,6 +1506,33 @@ icars-migration:
       - notes:
         :source: notes
         :type: JSON
+      - photo_url:
+        :source: photo_url
+        :type: text
+      - realm:
+        :source: realm
+        :type: text
+      - credentials:
+        :source: credentials
+        :type: jsonb
+      - challenges:
+        :source: challenges
+        :type: jsonb
+      - emailverified:
+        :source: emailVerified
+        :type: bool
+      - verificationtoken:
+        :source: verificationToken
+        :type: text
+      - resetpasswordtoken:
+        :source: resetPasswordToken
+        :type: text
+      - lastupdated:
+        :source: lastUpdated
+        :type: TIMESTAMP WITH TIME ZONE
+      - btid:
+        :source: btId
+        :type: text
     :meta:
       :table: dmcadmin
       :extra_props: true
@@ -1725,6 +1884,42 @@ icars-migration:
       - notes:
         :source: notes
         :type: JSON
+      - username:
+        :source: username
+        :type: text
+      - photo_url:
+        :source: photo_url
+        :type: text
+      - language:
+        :source: language
+        :type: text
+      - realm:
+        :source: realm
+        :type: text
+      - title:
+        :source: title
+        :type: text
+      - credentials:
+        :source: credentials
+        :type: jsonb
+      - challenges:
+        :source: challenges
+        :type: jsonb
+      - emailverified:
+        :source: emailVerified
+        :type: bool
+      - verificationtoken:
+        :source: verificationToken
+        :type: text
+      - resetpasswordtoken:
+        :source: resetPasswordToken
+        :type: text
+      - lastupdated:
+        :source: lastUpdated
+        :type: TIMESTAMP WITH TIME ZONE
+      - btid:
+        :source: btId
+        :type: text
     :meta:
       :table: dmcdivisionadmin
       :extra_props: true
@@ -3613,6 +3808,36 @@ icars-migration:
       - migratedtonewdb:
         :source: migratedToNewDB
         :type: BOOLEAN
+      - photo_url:
+        :source: photo_url
+        :type: text
+      - language:
+        :source: language
+        :type: text
+      - realm:
+        :source: realm
+        :type: text
+      - title:
+        :source: title
+        :type: text
+      - credentials:
+        :source: credentials
+        :type: jsonb
+      - challenges:
+        :source: challenges
+        :type: jsonb
+      - emailverified:
+        :source: emailVerified
+        :type: bool
+      - verificationtoken:
+        :source: verificationToken
+        :type: text
+      - lastupdated:
+        :source: lastUpdated
+        :type: TIMESTAMP WITH TIME ZONE
+      - btid:
+        :source: btId
+        :type: text
     :meta:
       :table: driver
       :extra_props: true
@@ -3742,6 +3967,39 @@ icars-migration:
       - removedwhen:
         :source: removedWhen
         :type: TIMESTAMP WITH TIME ZONE
+      - username:
+        :source: username
+        :type: text
+      - photo_url:
+        :source: photo_url
+        :type: text
+      - language:
+        :source: language
+        :type: text
+      - realm:
+        :source: realm
+        :type: text
+      - credentials:
+        :source: credentials
+        :type: jsonb
+      - challenges:
+        :source: challenges
+        :type: jsonb
+      - emailverified:
+        :source: emailVerified
+        :type: bool
+      - verificationtoken:
+        :source: verificationToken
+        :type: text
+      - resetpasswordtoken:
+        :source: resetPasswordToken
+        :type: text
+      - lastupdated:
+        :source: lastUpdated
+        :type: TIMESTAMP WITH TIME ZONE
+      - btid:
+        :source: btId
+        :type: text
     :meta:
       :table: dmcdepartmentadmin
       :extra_props: true
@@ -5245,3 +5503,55 @@ icars-migration:
       - url:
         :source: url
         :type: text
+  CloudStoreDriverImage:
+    :meta:
+      :table: cloudstoredriverimage
+      :extra_props: true
+  CloudStoreDriver:
+    :meta:
+      :table: cloudstoredriver
+      :extra_props: true
+  CloudStoreEmployee:
+    :meta:
+      :table: cloudstoreemployee
+      :extra_props: true
+  CloudStoreImage:
+    :meta:
+      :table: cloudstoreimage
+      :extra_props: true
+  CloudStoreMessage:
+    :meta:
+      :table: cloudstoremessage
+      :extra_props: true
+  GeoHelper:
+    :meta:
+      :table: geohelper
+      :extra_props: true
+  MongoScheduler:
+    :meta:
+      :table: mongoscheduler
+      :extra_props: true
+  Parse:
+    :meta:
+      :table: parse
+      :extra_props: true
+  ProximityAlertStashed:
+    :meta:
+      :table: proximityalertstashed
+      :extra_props: true
+  Stripe:
+    :meta:
+      :table: stripe
+      :extra_props: true
+  TripClaim:
+    :meta:
+      :table: tripclaim
+      :extra_props: true
+  TripToll:
+    :meta:
+      :table: triptoll
+      :extra_props: true
+  Utils:
+    :meta:
+      :table: utils
+      :extra_props: true
