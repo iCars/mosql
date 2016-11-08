@@ -1,4 +1,4 @@
-icars:
+icars-migration:
   TPTPAffiliate:
     :columns:
       - id:
@@ -4544,6 +4544,9 @@ icars:
       :table: address
       :extra_props: true
     :columns:
+      - id:
+        :source: _id
+        :type: TEXT
       - number:
         :source: number
         :type: text
@@ -4576,6 +4579,9 @@ icars:
       :table: airport
       :extra_props: true
     :columns:
+      - id:
+        :source: _id
+        :type: TEXT
       - flightawareid:
         :source: flightAwareId
         :type: text
@@ -4605,6 +4611,9 @@ icars:
       :table: applyfrequency
       :extra_props: true
     :columns:
+      - id:
+        :source: _id
+        :type: TEXT
       - apply:
         :source: apply
         :type: bool
@@ -4616,6 +4625,9 @@ icars:
       :table: basemodel
       :extra_props: true
     :columns:
+      - id:
+        :source: _id
+        :type: TEXT
       - updatedat:
         :source: updatedAt
         :type: TIMESTAMP WITH TIME ZONE
@@ -4625,31 +4637,14 @@ icars:
       - migratedtonewdb:
         :source: migratedToNewDB
         :type: bool
-  CloudStoreDriverImage:
-    :meta:
-      :table: cloudstoredriverimage
-      :extra_props: true
-  CloudStoreDriver:
-    :meta:
-      :table: cloudstoredriver
-      :extra_props: true
-  CloudStoreEmployee:
-    :meta:
-      :table: cloudstoreemployee
-      :extra_props: true
-  CloudStoreImage:
-    :meta:
-      :table: cloudstoreimage
-      :extra_props: true
-  CloudStoreMessage:
-    :meta:
-      :table: cloudstoremessage
-      :extra_props: true
   DMCRate:
     :meta:
       :table: dmcrate
       :extra_props: true
     :columns:
+      - id:
+        :source: _id
+        :type: TEXT
       - rateperminute:
         :source: ratePerMinute
         :type: real
@@ -4679,6 +4674,9 @@ icars:
       :table: doorman
       :extra_props: true
     :columns:
+      - id:
+        :source: _id
+        :type: TEXT
       - imageurl:
         :source: imageURL
         :type: text
@@ -4696,6 +4694,9 @@ icars:
       :table: driverpaymenttransfer
       :extra_props: true
     :columns:
+      - id:
+        :source: _id
+        :type: TEXT
       - manuallypayed:
         :source: manuallyPayed
         :type: bool
@@ -4720,15 +4721,14 @@ icars:
       - transferobject:
         :source: transferObject
         :type: jsonb
-  GeoHelper:
-    :meta:
-      :table: geohelper
-      :extra_props: true
   GeoStashed:
     :meta:
       :table: geostashed
       :extra_props: true
     :columns:
+      - id:
+        :source: _id
+        :type: TEXT
       - w:
         :source: w
         :type: TIMESTAMP WITH TIME ZONE
@@ -4752,6 +4752,9 @@ icars:
       :table: marketdispatchrules
       :extra_props: true
     :columns:
+      - id:
+        :source: _id
+        :type: TEXT
       - maxtargetradiusinmeters:
         :source: maxTargetRadiusInMeters
         :type: real
@@ -4775,6 +4778,9 @@ icars:
       :table: markuptype
       :extra_props: true
     :columns:
+      - id:
+        :source: _id
+        :type: TEXT
       - value:
         :source: value
         :type: real
@@ -4787,25 +4793,17 @@ icars:
       - maxdollar:
         :source: maxDollar
         :type: real
-  MongoScheduler:
-    :meta:
-      :table: mongoscheduler
-      :extra_props: true
-  Parse:
-    :meta:
-      :table: parse
-      :extra_props: true
   PaymentMethod:
     :meta:
       :table: paymentmethod
       :extra_props: true
     :columns:
+      - id:
+        :source: _id
+        :type: TEXT
       - inactive:
         :source: inactive
         :type: bool
-      - id:
-        :source: id
-        :type: text
       - is_apple_pay:
         :source: is_apple_pay
         :type: bool
@@ -4823,21 +4821,23 @@ icars:
       :table: pointtopointrates
       :extra_props: true
     :columns:
+      - id:
+        :source: _id
+        :type: TEXT
       - open:
         :source: open
         :type: real
       - closed:
         :source: closed
         :type: real
-  ProximityAlertStashed:
-    :meta:
-      :table: proximityalertstashed
-      :extra_props: true
   QRImage:
     :meta:
       :table: qrimage
       :extra_props: true
     :columns:
+      - id:
+        :source: _id
+        :type: TEXT
       - text:
         :source: text
         :type: text
@@ -4864,6 +4864,9 @@ icars:
       :table: rates
       :extra_props: true
     :columns:
+      - id:
+        :source: _id
+        :type: TEXT
       - rateperminute:
         :source: ratePerMinute
         :type: real
@@ -4887,6 +4890,9 @@ icars:
       :table: s3image
       :extra_props: true
     :columns:
+      - id:
+        :source: _id
+        :type: TEXT
       - filename:
         :source: filename
         :type: text
@@ -4896,15 +4902,14 @@ icars:
       - contenttype:
         :source: contentType
         :type: text
-  Stripe:
-    :meta:
-      :table: stripe
-      :extra_props: true
   Telephone:
     :meta:
       :table: telephone
       :extra_props: true
     :columns:
+      - id:
+        :source: _id
+        :type: TEXT
       - country_code:
         :source: country_code
         :type: text
@@ -4922,6 +4927,9 @@ icars:
       :table: tpbackgroundcheck
       :extra_props: true
     :columns:
+      - id:
+        :source: _id
+        :type: TEXT
       - state:
         :source: state
         :type: jsonb
@@ -4936,6 +4944,9 @@ icars:
       :table: tpdrugtesting
       :extra_props: true
     :columns:
+      - id:
+        :source: _id
+        :type: TEXT
       - urine9panel:
         :source: urine9Panel
         :type: jsonb
@@ -4953,6 +4964,9 @@ icars:
       :table: tpgeneralinfoadmin
       :extra_props: true
     :columns:
+      - id:
+        :source: _id
+        :type: TEXT
       - firstname:
         :source: firstName
         :type: text
@@ -4979,6 +4993,9 @@ icars:
       :table: tpgeneralinfovehicles
       :extra_props: true
     :columns:
+      - id:
+        :source: _id
+        :type: TEXT
       - numberofvehicles:
         :source: numberOfVehicles
         :type: real
@@ -5008,6 +5025,9 @@ icars:
       :table: tpinsurancecoverage
       :extra_props: true
     :columns:
+      - id:
+        :source: _id
+        :type: TEXT
       - commercialliability:
         :source: commercialLiability
         :type: real
@@ -5031,6 +5051,9 @@ icars:
       :table: tpinsurance
       :extra_props: true
     :columns:
+      - id:
+        :source: _id
+        :type: TEXT
       - name:
         :source: name
         :type: text
@@ -5066,6 +5089,9 @@ icars:
       :table: tptraining
       :extra_props: true
     :columns:
+      - id:
+        :source: _id
+        :type: TEXT
       - defensive:
         :source: defensive
         :type: bool
@@ -5078,15 +5104,14 @@ icars:
       - cpr:
         :source: cpr
         :type: bool
-  TripClaim:
-    :meta:
-      :table: tripclaim
-      :extra_props: true
   TripRequestResolutionNotes:
     :meta:
       :table: triprequestresolutionnotes
       :extra_props: true
     :columns:
+      - id:
+        :source: _id
+        :type: TEXT
       - timestamp:
         :source: timestamp
         :type: TIMESTAMP WITH TIME ZONE
@@ -5099,15 +5124,14 @@ icars:
       - reportedrole:
         :source: reportedRole
         :type: text
-  TripToll:
-    :meta:
-      :table: triptoll
-      :extra_props: true
   TwilioResponse:
     :meta:
       :table: twilioresponse
       :extra_props: true
     :columns:
+      - id:
+        :source: _id
+        :type: TEXT
       - sid:
         :source: sid
         :type: text
@@ -5203,6 +5227,9 @@ icars:
       :table: twilio
       :extra_props: true
     :columns:
+      - id:
+        :source: _id
+        :type: TEXT
       - type:
         :source: type
         :type: text
@@ -5218,7 +5245,3 @@ icars:
       - url:
         :source: url
         :type: text
-  Utils:
-    :meta:
-      :table: utils
-      :extra_props: true
