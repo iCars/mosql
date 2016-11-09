@@ -2046,6 +2046,12 @@ icars-migration:
       - dmcid:
         :source: dmcId
         :type: TEXT
+      - dmcdepartmentid:
+        :source: dmcDepartmentId
+        :type: TEXT
+      - dmcdivisionid:
+        :source: dmcDivisionId
+        :type: TEXT
     :meta:
       :table: dmcnetterms
       :extra_props: true
