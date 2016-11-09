@@ -4455,8 +4455,8 @@ icars-migration:
       - was_requeue:
         :source: was_requeue
         :type: BOOLEAN
-      - dmc_invoice_id:
-        :source: dmc_invoice_id
+      - dmcinvoiceid:
+        :source: dmcInvoiceId
         :type: TEXT
       - expectedhours:
         :source: expectedHours
