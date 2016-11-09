@@ -857,7 +857,7 @@ icars-migration:
         :type: text
       - status:
         :source: status
-        :type: status
+        :type: text
     :meta:
       :table: bookingagent
       :extra_props: true
