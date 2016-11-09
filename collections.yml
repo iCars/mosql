@@ -680,6 +680,9 @@ icars-migration:
       - lastupdated:
         :source: lastUpdated
         :type: TIMESTAMP WITH TIME ZONE
+      - status:
+        :source: status
+        :type: TEXT
     :meta:
       :table: passenger
       :extra_props: true
@@ -852,6 +855,9 @@ icars-migration:
       - btid:
         :source: btId
         :type: text
+      - status:
+        :source: status
+        :type: status
     :meta:
       :table: bookingagent
       :extra_props: true
@@ -938,6 +944,9 @@ icars-migration:
       - btid:
         :source: btId
         :type: text
+      - status:
+        :source: status
+        :type: TEXT
     :meta:
       :table: tpadmin
       :extra_props: true
@@ -1536,6 +1545,9 @@ icars-migration:
       - btid:
         :source: btId
         :type: text
+      - status:
+        :source: status
+        :type: text
     :meta:
       :table: dmcadmin
       :extra_props: true
@@ -1922,6 +1934,9 @@ icars-migration:
         :type: TIMESTAMP WITH TIME ZONE
       - btid:
         :source: btId
+        :type: text
+      - status:
+        :source: status
         :type: text
     :meta:
       :table: dmcdivisionadmin
@@ -4003,6 +4018,9 @@ icars-migration:
       - btid:
         :source: btId
         :type: text
+      - status:
+        :source: status
+        :type: TEXT
     :meta:
       :table: dmcdepartmentadmin
       :extra_props: true
@@ -4077,6 +4095,9 @@ icars-migration:
       - btid:
         :source: btId
         :type: text
+      - status:
+        :source: status
+        :type: TEXT
     :meta:
       :table: phoenixuser
       :extra_props: true
