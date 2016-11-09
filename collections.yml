@@ -1225,6 +1225,9 @@ icars-migration:
       - btid:
         :source: btId
         :type: text
+      - status:
+        :source: status
+        :type: text
     :meta:
       :table: driverforapproval
       :extra_props: true
